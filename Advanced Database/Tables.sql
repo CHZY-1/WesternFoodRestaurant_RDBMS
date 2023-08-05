@@ -6,7 +6,7 @@ CREATE TABLE Tables (
 	tableReservationStatus VARCHAR(20),
 	orderID VARCHAR(10),
 	PRIMARY KEY (tableID),
-	FOREIGN KEY orderID REFERENCES Orders (orderID),
+	FOREIGN KEY (orderID) REFERENCES Orders (orderID),
 	CONSTRAINT checkingTableCapacity Check(tableCapacity >= 0)
 );
 
