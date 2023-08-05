@@ -6,7 +6,7 @@ CREATE TABLE Reservations (
 	customerID VARCHAR(10) NOT NULL,
 	tableID VARCHAR(10) NOT NULL,
 	PRIMARY KEY (reservationID),
-	FOREIGN KEY (customerID) REFERENCES Customer (customerID),
+	FOREIGN KEY (customerID) REFERENCES Customers (customerID),
 	FOREIGN KEY (tableID) REFERENCES Tables (tableID),
 	CONSTRAINT checkingReservationNoOfPeople Check(reservationNoOfPeople >= 0)
 );

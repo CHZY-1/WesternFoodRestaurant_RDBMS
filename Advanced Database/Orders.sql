@@ -8,8 +8,8 @@ CREATE TABLE Orders(
 	PRIMARY KEY (orderID),
 	FOREIGN KEY (employeeID) REFERENCES Employees (employeeID),
 	FOREIGN KEY (tableID) REFERENCES Tables (tableID)
-
 );
+
 INSERT INTO Orders (orderID, orderDate, orderStatus, employeeID, customerID, tableID) VALUES ('O0001', '12/6/2023', 'COMPLETE', 'E007', 'C001', '');
 INSERT INTO Orders (orderID, orderDate, orderStatus, employeeID, customerID, tableID) VALUES ('O0002', '12/6/2023', 'COMPLETE', 'E007', 'C021', '');
 INSERT INTO Orders (orderID, orderDate, orderStatus, employeeID, customerID, tableID) VALUES ('O0003', '12/6/2023', 'COMPLETE', 'E008', 'C003', '');
