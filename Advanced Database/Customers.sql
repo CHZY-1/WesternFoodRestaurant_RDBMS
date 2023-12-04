@@ -4,8 +4,10 @@ CREATE TABLE Customers (
 	customerEmail VARCHAR(50),
 	customerPhone VARCHAR(20),
 	customerAddress VARCHAR(255),
-	PRIMARY KEY (customerID)
+	PRIMARY KEY (customerID),
+	CONSTRAiNT chk_customerid CHECK (customerID LIKE 'C%')
 );
+
 INSERT INTO Customers (customerID, customerName, customerEmail, customerPhone, customerAddress) VALUES ('C001', 'Dimitri Roney', 'droney0@gmail.com', '011-961-9537', '8009 Barnett Way');
 INSERT INTO Customers (customerID, customerName, customerEmail, customerPhone, customerAddress) VALUES ('C002', 'Lennie chavey', 'lchavey1@gmail.com', '011-481-2351', '67752 Southridge Plaza');
 INSERT INTO Customers (customerID, customerName, customerEmail, customerPhone, customerAddress) VALUES ('C003', 'Margaret Matei', 'mmatei2@gmail.com', '012-755-6000', '8 crest Line crossing');
@@ -60,5 +62,3 @@ INSERT INTO Customers (customerID, customerName, customerEmail, customerPhone, c
 INSERT INTO Customers (customerID, customerName, customerEmail, customerPhone, customerAddress) VALUES ('C048', 'Amandi Kendle', 'akendleh@gmail.com', '014-369-5247', '63 Reindahl Way');
 INSERT INTO Customers (customerID, customerName, customerEmail, customerPhone, customerAddress) VALUES ('C049', 'Phyllys Syplus', 'psyplusi@gmail.com', '015-309-2554', '7 Anzinger Park');
 INSERT INTO Customers (customerID, customerName, customerEmail, customerPhone, customerAddress) VALUES ('C050', 'Darlene Ingraham', 'dingrahamj@gmail.com', '017-493-5802', '3 Bay Parkway');
-
-/*Done

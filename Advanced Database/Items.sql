@@ -7,7 +7,8 @@ CREATE TABLE Items (
 	categoryID VARCHAR(10),
 	PRIMARY KEY (itemsID),
 	FOREIGN KEY (categoryID) REFERENCES Categories (categoryID),
-	CONSTRAINT checkingItemPrice Check(itemPrice >= 0)
+	CONSTRAINT checkingItemPrice Check(itemPrice >= 0),
+	CONSTRAiNT chk_itemsid CHECK (itemsID LIKE 'I%')
 );
 
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I001', 'Premium Chicken Chop', 'Tender and juicy chicken chop seasoned with our special blend of herbs and spices, grilled to perfection.', 24.00, 'Available', 'CA001');
@@ -24,12 +25,12 @@ INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailabili
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I012', 'Classic Carbonara', 'Indulge in the classic Italian favorite! Spaghetti tossed in a creamy carbonara sauce with bacon and parmesan cheese.', 29.00, 'Available', 'CA002');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I013', 'Seafood Aglio Olio', 'Simple yet flavorful! Spaghetti infused with garlic, chili flakes, and olive oil, topped with a medley of fresh seafood.', 31.00, 'Available', 'CA002');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I014', 'Grilled Salmon Aglio Olio', 'Healthy and delicious! Grilled salmon served on a bed of aglio olio pasta, a perfect combination.', 34.00, 'Available', 'CA002');
-INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I015', 'Spicy & Creamy Seafood Pasta', 'An explosion of flavors! Creamy pasta with a spicy kick, loaded with a variety of delectable seafood.', 32.00, 'Available', 'CA002');
+INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I015', 'Spicy And Creamy Seafood Pasta', 'An explosion of flavors! Creamy pasta with a spicy kick, loaded with a variety of delectable seafood.', 32.00, 'Available', 'CA002');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I016', 'Seafood Marinara', 'A seafood lovers dream! Pasta served with a rich marinara sauce, brimming with the goodness of fresh seafood.', 31.00, 'Available', 'CA002');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I017', 'Peanut Sauce Pork Burger', 'Juicy pork patty topped with a savory peanut sauce, a unique twist to a classic burger.', 29.00, 'Available', 'CA003');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I018', 'Golden Fish Burger', 'A seafood delight! Crispy fish fillet served on a soft burger bun with fresh vegetables and special sauce.', 24.00, 'Available', 'CA003');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I019', 'Wagyu Beef Burger', 'Indulge in the ultimate burger experience! Premium wagyu beef patty topped with gourmet ingredients.', 39.00, 'Available', 'CA003');
-INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I020', 'Hot & Spicy Chicken Burger', 'For spice enthusiasts! Fiery hot chicken patty served on a toasted bun with cooling accompaniments.', 31.00, 'Available', 'CA003');
+INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I020', 'Hot And Spicy Chicken Burger', 'For spice enthusiasts! Fiery hot chicken patty served on a toasted bun with cooling accompaniments.', 31.00, 'Available', 'CA003');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I021', 'Signature Cheese Pizza', 'A timeless favorite! Our classic cheese pizza with a thin and crispy crust.', 30.00, 'Available', 'CA004');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I022', 'Hawaiian Chicken Pizza', 'Tropical flavors in every bite! Savory chicken, juicy pineapple, and melted cheese on a pizza crust.', 23.00, 'Available', 'CA004');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I023', 'Mediterranean Seafood Pizza', 'A taste of the Mediterranean! A seafood pizza loaded with fresh seafood and Mediterranean herbs.', 43.00, 'Available', 'CA004');
@@ -60,5 +61,6 @@ INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailabili
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I048', 'Tiger', 'A crisp and refreshing lager beer, perfect for enjoying with friends.', 13.00, 'Available', 'CA010');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I049', 'Heineken', 'A premium lager beer with a balanced and smooth taste.', 15.00, 'Available', 'CA010');
 INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I050', 'Guinness', 'A rich and velvety stout beer with notes of coffee and chocolate.', 15.00, 'Available', 'CA010');
-
-/*Done
+INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I051', 'Vanilla Ice Cream', 'Indulge in the timeless allure of our creamy vanilla ice cream.', 5.00, 'Available', 'CA011');
+INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I052', 'Chocolate Ice Cream', 'Dive into the indulgent charm of our smooth chocolate ice cream.', 5.00, 'Available', 'CA011');
+INSERT INTO Items (itemsID, itemName, itemDescription, itemPrice, itemAvailability, categoryID) VALUES ('I053', 'Cheese Cake', 'Velvety cheesecake perfection with a buttery crust.', 8.00, 'Available', 'CA011');
